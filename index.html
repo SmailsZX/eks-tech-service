@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭксТехСервис — 3 концепции лендинга</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #F8F7F4;
+            --surface: #FFFFFF;
+            --border: #E0DDD8;
+            --text: #1A1A1A;
+            --muted: #6B6B6B;
+            --accent: #2A3D2F;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+        a { color: inherit; text-decoration: none; }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            padding: 20px 0; border-bottom: 1px solid var(--border);
+            background: var(--surface); position: sticky; top: 0; z-index: 100;
+        }
+        .site-header__inner { display: flex; align-items: center; justify-content: space-between; }
+        .site-header__logo {
+            font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 800;
+            letter-spacing: -0.02em; color: var(--text);
+        }
+        .site-header__logo span { color: var(--accent); }
+        .site-header__nav { display: flex; gap: 28px; }
+        .site-header__nav a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.2s; }
+        .site-header__nav a:hover { color: var(--accent); }
+
+        /* ===== HERO ===== */
+        .hero { padding: 80px 0 64px; }
+        .hero__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+        .hero__eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+        .hero__title { font-family: 'Manrope', sans-serif; font-size: clamp(36px, 5vw, 56px); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 20px; }
+        .hero__desc { font-size: 16px; color: var(--muted); line-height: 1.7; max-width: 400px; margin-bottom: 32px; }
+        .hero__tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 50px; background: rgba(42,61,47,0.08); color: var(--accent); letter-spacing: 0.04em; }
+
+        /* ===== CONCEPT CARDS ===== */
+        .concepts { padding: 40px 0 100px; }
+        .concept { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 24px; background: var(--surface); }
+        .concept:nth-child(even) .concept__preview { order: 2; }
+        .concept__preview { position: relative; min-height: 420px; overflow: hidden; }
+        .concept__preview-bg {
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center;
+        }
+        .concept__preview-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%);
+        }
+        .concept__preview-content {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            padding: 24px; z-index: 2;
+        }
+        .concept__preview-num {
+            font-family: 'Manrope', sans-serif; font-size: 10px; font-weight: 700;
+            letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7);
+            margin-bottom: 8px;
+        }
+        .concept__preview-name {
+            font-family: 'Manrope', sans-serif; font-size: 20px; font-weight: 800;
+            color: #fff; text-transform: uppercase; letter-spacing: 0.04em;
+        }
+        .concept__content { padding: 40px; display: flex; flex-direction: column; justify-content: center; gap: 20px; }
+        .concept__num { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+        .concept__name { font-family: 'Manrope', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+        .concept__desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+        .concept__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .concept__tag { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 50px; background: rgba(42,61,47,0.08); color: var(--accent); }
+        .concept__link {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.06em; color: var(--text);
+            border: 1.5px solid var(--border); padding: 10px 20px; border-radius: 8px;
+            transition: border-color 0.2s, color 0.2s, background 0.2s; width: fit-content;
+        }
+        .concept__link:hover { border-color: var(--accent); color: var(--accent); background: rgba(42,61,47,0.04); }
+
+        /* ===== COMPARISON ===== */
+        .comparison { padding: 80px 0; border-top: 1px solid var(--border); }
+        .comparison__title { font-family: 'Manrope', sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 40px; text-align: center; letter-spacing: -0.02em; }
+        .comparison__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .comp-col { padding: 28px 24px; border-right: 1px solid var(--border); transition: background 0.2s; }
+        .comp-col:last-child { border-right: none; }
+        .comp-col:hover { background: #F8F7F4; }
+        .comp-col__num { font-family: 'Manrope', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; }
+        .c01 .comp-col__num { color: #E85A4F; }
+        .c02 .comp-col__num { color: #2B7DE9; }
+        .c03 .comp-col__num { color: var(--accent); }
+        .comp-col__name { font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 800; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.02em; }
+        .comp-col__item { font-size: 13px; color: var(--muted); padding: 6px 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
+        .comp-col__item:last-child { border-bottom: none; }
+        .comp-col__item span { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); opacity: 0.7; margin-bottom: 2px; }
+
+        /* ===== FOOTER ===== */
+        .footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; }
+        .footer__text { font-size: 13px; color: var(--muted); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+            .concept { grid-template-columns: 1fr; }
+            .concept__preview { min-height: 280px; }
+            .concept:nth-child(even) .concept__preview { order: 0; }
+            .concept__content { padding: 28px; }
+            .comparison__grid { grid-template-columns: 1fr; }
+            .comp-col { border-right: none !important; border-bottom: 1px solid var(--border); }
+            .comp-col:last-child { border-bottom: none; }
+        }
+        @media (max-width: 600px) {
+            .wrap { padding: 0 20px; }
+            .hero { padding: 48px 0 40px; }
+            .hero__title { font-size: 32px; }
+            .concept__content { padding: 20px; }
+            .concept__name { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="wrap site-header__inner">
+            <a href="#" class="site-header__logo">ЭксТех<span>Сервис</span> · Концепции</a>
+            <nav class="site-header__nav">
+                <a href="#c01">Промтех</a>
+                <a href="#c02">СервисПро</a>
+                <a href="#c03">Эклект</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="wrap hero__inner">
+            <div>
+                <p class="hero__eyebrow">Тестовое задание</p>
+                <h1 class="hero__title">Три концепции<br>для одного бренда</h1>
+                <p class="hero__desc">Промышленный, сервисный и тёплый премиум. Каждая — отдельный визуальный мир. Выберите подходящий.</p>
+                <div class="hero__tags">
+                    <span class="tag">C01 · Тёмная</span>
+                    <span class="tag">C02 · Светлая</span>
+                    <span class="tag">C03 · Тёплая</span>
+                </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+                <a href="#c01" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:#fff;border:1px solid #E0DDD8;border-radius:10px;transition:all 0.2s">
+                    <div style="width:8px;height:8px;border-radius:50%;background:#E85A4F;flex-shrink:0"></div>
+                    <div>
+                        <div style="font-family:'Manrope';font-size:14px;font-weight:700">ПРОМТЕХ</div>
+                        <div style="font-size:12px;color:#6B6B6B">Графит · Коралл · Oswald</div>
+                    </div>
+                    <span style="margin-left:auto;color:#6B6B6B">→</span>
+                </a>
+                <a href="#c02" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:#fff;border:1px solid #E0DDD8;border-radius:10px;transition:all 0.2s">
+                    <div style="width:8px;height:8px;border-radius:50%;background:#2B7DE9;flex-shrink:0"></div>
+                    <div>
+                        <div style="font-family:'Manrope';font-size:14px;font-weight:700">СЕРВИСПРО</div>
+                        <div style="font-size:12px;color:#6B6B6B">Светлый · Синий · Manrope</div>
+                    </div>
+                    <span style="margin-left:auto;color:#6B6B6B">→</span>
+                </a>
+                <a href="#c03" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:#fff;border:1px solid #E0DDD8;border-radius:10px;transition:all 0.2s">
+                    <div style="width:8px;height:8px;border-radius:50%;background:#2A3D2F;flex-shrink:0"></div>
+                    <div>
+                        <div style="font-family:'Manrope';font-size:14px;font-weight:700">ЭКСЕКТ</div>
+                        <div style="font-size:12px;color:#6B6B6B">Тёплый беж · Зелёный · Cormorant</div>
+                    </div>
+                    <span style="margin-left:auto;color:#6B6B6B">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== C01: ПРОМТЕХ ===== -->
+    <section class="concepts" id="c01">
+        <div class="wrap">
+            <div class="concept c01">
+                <div class="concept__preview">
+                    <div class="concept__preview-bg" style="background-image:url('https://images.unsplash.com/photo-1580901368919-7738efb0f87e?w=900&q=80&auto=format&fit=crop');filter:brightness(0.55) contrast(1.2) saturate(0.6)"></div>
+                    <div class="concept__preview-overlay"></div>
+                    <div class="concept__preview-content">
+                        <div class="concept__preview-num">Концепция 01</div>
+                        <div class="concept__preview-name">ПРОМТЕХ</div>
+                    </div>
+                </div>
+                <div class="concept__content">
+                    <p class="concept__num">Концепция 01</p>
+                    <h2 class="concept__name">ПРОМТЕХ</h2>
+                    <p class="concept__desc">Промышленный характер. Графитовый фон, коралловый акцент. Oswald uppercase. Крупная типографика, editorial-стиль с нумерованными списками.</p>
+                    <div class="concept__tags">
+                        <span class="concept__tag">Тёмная тема</span>
+                        <span class="concept__tag">Oswald</span>
+                        <span class="concept__tag">Коралл #E85A4F</span>
+                    </div>
+                    <a href="concept-01/index.html" class="concept__link">Открыть концепцию →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== C02: СЕРВИСПРО ===== -->
+    <section class="concepts" id="c02">
+        <div class="wrap">
+            <div class="concept c02">
+                <div class="concept__content">
+                    <p class="concept__num">Концепция 02</p>
+                    <h2 class="concept__name">СЕРВИСПРО</h2>
+                    <p class="concept__desc">Дружелюбный, светлый, сервисный. Доступность и доверие. Manrope + синий акцент. Мягкие формы, много воздуха.</p>
+                    <div class="concept__tags">
+                        <span class="concept__tag">Светлая тема</span>
+                        <span class="concept__tag">Manrope</span>
+                        <span class="concept__tag">Синий #2B7DE9</span>
+                    </div>
+                    <a href="concept-02/index.html" class="concept__link">Открыть концепцию →</a>
+                </div>
+                <div class="concept__preview">
+                    <div class="concept__preview-bg" style="background-image:url('https://images.unsplash.com/photo-1759692071969-c32285cffc40?w=900&q=80&auto=format&fit=crop');filter:brightness(1.05) saturate(1.1)"></div>
+                    <div class="concept__preview-overlay"></div>
+                    <div class="concept__preview-content">
+                        <div class="concept__preview-num">Концепция 02</div>
+                        <div class="concept__preview-name">СЕРВИСПРО</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== C03: ЭКСЕКТ ===== -->
+    <section class="concepts" id="c03">
+        <div class="wrap">
+            <div class="concept c03">
+                <div class="concept__preview">
+                    <div class="concept__preview-bg" style="background-image:url('https://plus.unsplash.com/premium_photo-1664302297980-90edacce6ea2?w=900&q=80&auto=format&fit=crop');filter:sepia(0.25) saturate(0.85) brightness(0.95) contrast(1.05)"></div>
+                    <div class="concept__preview-overlay"></div>
+                    <div class="concept__preview-content">
+                        <div class="concept__preview-num">Концепция 03</div>
+                        <div class="concept__preview-name">ЭКСЕКТ</div>
+                    </div>
+                </div>
+                <div class="concept__content">
+                    <p class="concept__num">Концепция 03</p>
+                    <h2 class="concept__name">ЭКСЕКТ</h2>
+                    <p class="concept__desc">Тёплый премиум. Бежевый фон, тёмно-зелёный акцент. Cormorant Garamond для заголовков — элегантный, но читаемый. Фото с единым тёплым фильтром.</p>
+                    <div class="concept__tags">
+                        <span class="concept__tag">Тёплая тема</span>
+                        <span class="concept__tag">Cormorant Garamond</span>
+                        <span class="concept__tag">Зелёный #2A3D2F</span>
+                    </div>
+                    <a href="concept-03/index.html" class="concept__link">Открыть концепцию →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== СРАВНЕНИЕ ===== -->
+    <section class="comparison">
+        <div class="wrap">
+            <h2 class="comparison__title">Что отличается</h2>
+            <div class="comparison__grid">
+                <div class="comp-col c01">
+                    <p class="comp-col__num">01</p>
+                    <h3 class="comp-col__name">ПРОМТЕХ</h3>
+                    <div class="comp-col__item"><span>Фон</span>Графит #0E1012</div>
+                    <div class="comp-col__item"><span>Акцент</span>Коралл #E85A4F</div>
+                    <div class="comp-col__item"><span>Заголовки</span>Oswald uppercase</div>
+                    <div class="comp-col__item"><span>Hero</span>Фото на весь экран + оверлей</div>
+                    <div class="comp-col__item"><span>Услуги</span>Editorial список</div>
+                    <div class="comp-col__item"><span>Карта</span>Яндекс.Карты (контакты)</div>
+                </div>
+                <div class="comp-col c02">
+                    <p class="comp-col__num">02</p>
+                    <h3 class="comp-col__name">СЕРВИСПРО</h3>
+                    <div class="comp-col__item"><span>Фон</span>Светлый #FFFFFF</div>
+                    <div class="comp-col__item"><span>Акцент</span>Синий #2B7DE9</div>
+                    <div class="comp-col__item"><span>Заголовки</span>Manrope жирный</div>
+                    <div class="comp-col__item"><span>Hero</span>2 колонки: текст + фото</div>
+                    <div class="comp-col__item"><span>Услуги</span>Карточки 3×2 с фото</div>
+                    <div class="comp-col__item"><span>Карта</span>Яндекс.Карты (контакты)</div>
+                </div>
+                <div class="comp-col c03">
+                    <p class="comp-col__num">03</p>
+                    <h3 class="comp-col__name">ЭКСЕКТ</h3>
+                    <div class="comp-col__item"><span>Фон</span>Тёплый беж #F5F1EA</div>
+                    <div class="comp-col__item"><span>Акцент</span>Тёмно-зелёный #2A3D2F</div>
+                    <div class="comp-col__item"><span>Заголовки</span>Cormorant Garamond</div>
+                    <div class="comp-col__item"><span>Hero</span>2 колонки + тёплое фото</div>
+                    <div class="comp-col__item"><span>Услуги</span>Editorial с фото 2×3</div>
+                    <div class="comp-col__item"><span>Карта</span>Яндекс.Карты (контакты)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="wrap">
+            <p class="footer__text">Тестовое задание · ЭксТехСервис · Сыктывкар · 2026</p>
+        </div>
+    </footer>
+</body>
+</html>

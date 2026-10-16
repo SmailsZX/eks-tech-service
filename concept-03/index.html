@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭксТехСервис — Ремонт спецтехники в Сыктывкаре</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+                <span>ЭксТех<span mark>Сервис</span></span>
+            </a>
+            <nav class="nav" aria-label="Навигация">
+                <a href="#services">Услуги</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#brands">Марки</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <div class="header__right">
+                <a href="tel:+7XXXXXXXXXX" class="header__phone">+7 (XXX) XXX-XX-XX</a>
+                <a href="#form" class="btn btn--sm">Заявка</a>
+            </div>
+            <button class="burger" aria-label="Меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <div class="mobile-menu" aria-hidden="true">
+        <a href="#services">Услуги</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#brands">Марки</a>
+        <a href="#contact">Контакты</a>
+        <a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a>
+    </div>
+
+    <!-- ===== HERO — 2 колонки, тёплое фото без белого градиента ===== -->
+    <section class="hero">
+        <div class="hero__upper">
+            <div class="hero__text">
+                <div class="container">
+                    <p class="hero__eyebrow">Ремонт и обслуживание спецтехники</p>
+                    <h1 class="hero__title">
+                        Ремонт,<br>который<br><em>держит</em> нагрузку
+                    </h1>
+                    <p class="hero__subtitle">
+                        Экскаваторы, погрузчики, гидравлика, редукторы, ДВС.
+                        Hitachi · JCB · Volvo · Hyundai. Выездной сервис и собственная ремонтная база.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#form" class="btn">Оставить заявку</a>
+                        <a href="tel:+7XXXXXXXXXX" class="btn btn--ghost">Позвонить</a>
+                    </div>
+                    <div class="hero__trust">
+                        <span class="hero__trust-item">Опытные специалисты</span>
+                        <span class="hero__trust-item">Гарантия на работы</span>
+                        <span class="hero__trust-item">Выездной сервис</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <!-- УНИКАЛЬНОЕ фото C03: гидравлический механизм/двигатель -->
+                <div class="hero__visual-photo" aria-hidden="true"></div>
+                <div class="hero__visual-overlay" aria-hidden="true"></div>
+            </div>
+        </div>
+        <!-- Фото-полоса внизу — УНИКАЛЬНОЕ фото C03: крупный план механизмов -->
+        <div class="hero__photo-strip">
+            <div class="hero__photo-strip-img" aria-hidden="true"></div>
+            <div class="hero__photo-strip-overlay" aria-hidden="true"></div>
+            <p class="hero__photo-strip-text">Сыктывкар · м. Дырнос, 98 · Пн–Пт: 09:00–18:00</p>
+        </div>
+    </section>
+
+    <!-- ===== УСЛУГИ — editorial с фото (уникальные для C03) ===== -->
+    <section class="services" id="services">
+        <div class="container">
+            <p class="section-label">Услуги</p>
+            <h2 class="section-title">Направления работ</h2>
+            <p class="section-desc">Полный спектр ремонта и обслуживания спецтехники.</p>
+            <div class="services__grid">
+                <!--.featured: экскаватор/погрузчик -->
+                <article class="service-row service-row--featured">
+                    <div class="service-row__img" style="background-image:url('https://plus.unsplash.com/premium_photo-1661900162979-6803cccda9c7?w=800&q=80&auto=format&fit=crop')" aria-hidden="true"></div>
+                    <div class="service-row__info">
+                        <span class="service-row__num">Главное направление</span>
+                        <h3 class="service-row__name">Ремонт экскаваторов и погрузчиков</h3>
+                        <p class="service-row__desc">Капитальный и текущий ремонт экскаваторов и погрузчиков всех марок. Диагностика, замена узлов, регулировка. Работаем с Hitachi, JCB, Volvo, Hyundai.</p>
+                    </div>
+                </article>
+                <!-- 01: гидравлические насосы — фото гидравлики -->
+                <article class="service-row">
+                    <div class="service-row__img" style="background-image:url('https://images.unsplash.com/photo-1766152386307-60a0b2a79a50?w=600&q=80&auto=format&fit=crop')" aria-hidden="true"></div>
+                    <div class="service-row__info">
+                        <span class="service-row__num">01</span>
+                        <h3 class="service-row__name">Гидравлические насосы</h3>
+                        <p class="service-row__desc">Ремонт и обслуживание гидравлических насосов. Переборка, замена манжет, регулировка.</p>
+                    </div>
+                </article>
+                <!-- 02: редукторы — фото редуктора/механизма -->
+                <article class="service-row">
+                    <div class="service-row__img" style="background-image:url('https://plus.unsplash.com/premium_photo-1682124461085-840de47dca5c?w=600&q=80&auto=format&fit=crop')" aria-hidden="true"></div>
+                    <div class="service-row__info">
+                        <span class="service-row__num">02</span>
+                        <h3 class="service-row__name">Редукторы хода</h3>
+                        <p class="service-row__desc">Ремонт редукторов хода экскаваторов и погрузчиков. Замена подшипников, шестерён.</p>
+                    </div>
+                </article>
+                <!-- 03: распределители — фото гидравлических труб -->
+                <article class="service-row">
+                    <div class="service-row__img" style="background-image:url('https://images.unsplash.com/photo-1759064776046-45b988af4b6d?w=600&q=80&auto=format&fit=crop')" aria-hidden="true"></div>
+                    <div class="service-row__info">
+                        <span class="service-row__num">03</span>
+                        <h3 class="service-row__name">Распределители</h3>
+                        <p class="service-row__desc">Ремонт гидрораспределителей. Промывка, замена золотников, восстановление герметичности.</p>
+                    </div>
+                </article>
+                <!-- 04: ремонт ДВС — фото двигателя -->
+                <article class="service-row">
+                    <div class="service-row__img" style="background-image:url('https://plus.unsplash.com/premium_photo-1664299390906-25ccc786a295?w=600&q=80&auto=format&fit=crop')" aria-hidden="true"></div>
+                    <div class="service-row__info">
+                        <span class="service-row__num">04</span>
+                        <h3 class="service-row__name">Ремонт ДВС</h3>
+                        <p class="service-row__desc">Капитальный ремонт двигателей. Замена поршневой, вкладышей, регулировка ГРМ.</p>
+                    </div>
+                </article>
+                <!-- 05: запчасти — фото металлолома/запчастей -->
+                <article class="service-row">
+                    <div class="service-row__img" style="background-image:url('https://images.unsplash.com/photo-1752857731513-d30897e8b5df?w=600&q=80&auto=format&fit=crop')" aria-hidden="true"></div>
+                    <div class="service-row__info">
+                        <span class="service-row__num">05</span>
+                        <h3 class="service-row__name">Запчасти</h3>
+                        <p class="service-row__desc">Оригинальные запчасти и аналоги для Hitachi, JCB, Volvo, Hyundai. В наличии и на заказ.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ПРЕИМУЩЕСТВА — крупные номера ===== -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <p class="section-label">О нас</p>
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <p class="section-desc">Реальные факты, а не маркетинговые лозунги.</p>
+        </div>
+        <div class="container" style="padding-top:0">
+            <div class="advantages__grid">
+                <div class="advantage">
+                    <div class="advantage__num">01</div>
+                    <h3 class="advantage__title">Опытные специалисты</h3>
+                    <p class="advantage__desc">Квалифицированные мастера с многолетним опытом ремонта спецтехники. Знают каждую деталь.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__num">02</div>
+                    <h3 class="advantage__title">Гарантия на работы</h3>
+                    <p class="advantage__desc">Предоставляем гарантию на выполненные работы и установленные запчасти. Отвечаем за качество.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__num">03</div>
+                    <h3 class="advantage__title">Выездной сервис</h3>
+                    <p class="advantage__desc">Выезжаем к клиенту для диагностики и ремонта на объекте. Не нужно везти технику к нам.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__num">04</div>
+                    <h3 class="advantage__title">Своя ремонтная база</h3>
+                    <p class="advantage__desc">Собственное помещение для проведения ремонтных работ с необходимым оборудованием.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__num">05</div>
+                    <h3 class="advantage__title">Приемлемые цены</h3>
+                    <p class="advantage__desc">Прозрачное ценообразование без скрытых доплат. Расчёт после диагностики.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__num">06</div>
+                    <h3 class="advantage__title">Быстрые сроки</h3>
+                    <p class="advantage__desc">Минимальные сроки ремонта. Понимаем, что простой техники — это потеря денег.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== МАРКИ — editorial столбик ===== -->
+    <section class="brands" id="brands">
+        <div class="container">
+            <div class="brands__header">
+                <p class="section-label">Бренды</p>
+                <h2 class="section-title">Работаем с марками</h2>
+            </div>
+            <ul class="brands__list">
+                <li class="brand"><span class="brand__name">Hitachi</span><span class="brand__type">Экскаваторы · Погрузчики</span></li>
+                <li class="brand"><span class="brand__name">JCB</span><span class="brand__type">Экскаваторы-погрузчики</span></li>
+                <li class="brand"><span class="brand__name">Volvo</span><span class="brand__type">Спецтехника · Запчасти</span></li>
+                <li class="brand"><span class="brand__name">Hyundai</span><span class="brand__type">Экскаваторы · Погрузчики</span></li>
+            </ul>
+            <p class="brands__note">Запчасти и расходные материалы — уточняйте у менеджера</p>
+        </div>
+    </section>
+
+    <!-- ===== КОНТАКТЫ + Яндекс.Карта ===== -->
+    <section class="contacts" id="contact">
+        <div class="container">
+            <p class="section-label">Контакты</p>
+            <h2 class="section-title" style="margin-bottom:48px">Как нас найти</h2>
+            <div class="contacts__layout">
+                <div class="contacts__info">
+                    <div class="contact-item">
+                        <span class="contact-item__num">01</span>
+                        <div>
+                            <h4>Адрес</h4>
+                            <p>г. Сыктывкар, ул. Дырнос, д. 98</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item__num">02</span>
+                        <div>
+                            <h4>График</h4>
+                            <p>Пн–Пт: 09:00–18:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item__num">03</span>
+                        <div>
+                            <h4>Телефон</h4>
+                            <a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a>
+                            <p style="font-size:12px;margin-top:4px">Заглушка — уточнить у клиента</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item__num">04</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>email@example.com</p>
+                            <p style="font-size:12px;margin-top:4px">Заглушка — уточнить у клиента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=50.836629%2C61.668800&z=15&pt=50.836629,61.668800,pm2rdm" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ФОРМА ===== -->
+    <section class="form-section" id="form">
+        <div class="container">
+            <div class="form-layout">
+                <div class="form-info">
+                    <p class="section-label">Заявка</p>
+                    <h2 class="form-info__title">Оставить заявку</h2>
+                    <p class="form-info__desc">Заполните форму — мы перезвоним в течение часа и уточним детали.</p>
+                    <div class="form-info__items">
+                        <div class="form-info__item">Бесплатная диагностика</div>
+                        <div class="form-info__item">Ответ в течение часа</div>
+                        <div class="form-info__item">Расчёт стоимости после осмотра</div>
+                    </div>
+                </div>
+                <div class="form-wrapper" style="padding:48px">
+                    <form class="form" id="repairForm" novalidate>
+                        <div class="form__row">
+                            <div class="form__field">
+                                <label for="name">Имя <span class="req">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Иван Иванов" required autocomplete="name">
+                                <span class="form__error" aria-live="polite"></span>
+                            </div>
+                            <div class="form__field">
+                                <label for="phone">Телефон <span class="req">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+                                <span class="form__error" aria-live="polite"></span>
+                            </div>
+                        </div>
+                        <div class="form__field">
+                            <label for="service">Тип техники</label>
+                            <select id="service" name="service">
+                                <option value="">Не выбрано</option>
+                                <option value="excavator">Экскаватор</option>
+                                <option value="loader">Погрузчик</option>
+                                <option value="hydraulics">Гидравлическая система</option>
+                                <option value="reducer">Редуктор хода</option>
+                                <option value="distributor">Распределитель</option>
+                                <option value="dvs">ДВС</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="form__field">
+                            <label for="message">Комментарий</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Опишите технику, марку и проблему..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--full">Отправить заявку</button>
+                        <p class="form__note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <div class="form-success__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <h3>Заявка отправлена!</h3>
+                        <p>Мы свяжемся с вами в ближайшее время.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col footer__col-logo">
+                    <div class="footer__logo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                        ЭксТех<span mark>Сервис</span>
+                    </div>
+                    <p>Ремонт и обслуживание спецтехники в Сыктывкаре.</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Услуги</h4>
+                    <ul class="footer__list">
+                        <li><a href="#services">Ремонт экскаваторов</a></li>
+                        <li><a href="#services">Ремонт погрузчиков</a></li>
+                        <li><a href="#services">Гидравлика</a></li>
+                        <li><a href="#services">Запчасти</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>Компания</h4>
+                    <ul class="footer__list">
+                        <li><a href="#advantages">Преимущества</a></li>
+                        <li><a href="#brands">Марки</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>Контакты</h4>
+                    <ul class="footer__list">
+                        <li>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:middle;margin-right:6px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Сыктывкар, ул. Дырнос, 98
+                        </li>
+                        <li>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:middle;margin-right:6px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Пн–Пт: 09:00–18:00
+                        </li>
+                        <li><a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a></li>
+                        <li>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:middle;margin-right:6px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            email@example.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">© 2026 ЭксТехСервис. Ремонт спецтехники в Сыктывкаре.</p>
+                <p class="footer__dev">Лендинг разработан для тестового задания</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

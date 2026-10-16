@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭксТехСервис — Ремонт спецтехники в Сыктывкаре</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+                <span>ЭксТех<span mark>Сервис</span></span>
+            </a>
+            <nav class="nav" aria-label="Навигация">
+                <a href="#services">Услуги</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#brands">Марки</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <div class="header__right">
+                <a href="tel:+7XXXXXXXXXX" class="header__phone">+7 (XXX) XXX-XX-XX</a>
+                <a href="#form" class="btn btn--accent btn--sm">Запросить расчёт</a>
+            </div>
+            <button class="burger" aria-label="Меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" aria-hidden="true">
+        <a href="#services">Услуги</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#brands">Марки</a>
+        <a href="#contact">Контакты</a>
+        <a href="tel:+7XXXXXXXXXX" style="color:var(--accent)">+7 (XXX) XXX-XX-XX</a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <!-- Фото на весь экран -->
+        <div class="hero__bg" aria-hidden="true"></div>
+        <!-- Оверлей: слева тёмный, справа фото видно -->
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <!-- Вертикальный разделитель -->
+        <div class="hero__side-line" aria-hidden="true"></div>
+
+        <div class="container hero__content">
+            <p class="hero__eyebrow">Ремонт и обслуживание спецтехники</p>
+            <h1 class="hero__title">Спецтехника<br>снова в строю</h1>
+            <p class="hero__subtitle">
+                Экскаваторы, погрузчики, гидравлика, редукторы, ДВС.
+                Hitachi · JCB · Volvo · Hyundai. Выездной сервис и собственная ремонтная база в Сыктывкаре.
+            </p>
+            <div class="hero__actions">
+                <a href="#form" class="btn btn--accent btn--lg">Запросить расчёт</a>
+                <a href="tel:+7XXXXXXXXXX" class="btn btn--ghost btn--lg">Позвонить</a>
+            </div>
+            <div class="hero__trust">
+                <span class="hero__trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Опытные специалисты
+                </span>
+                <span class="hero__trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Гарантия на работы
+                </span>
+                <span class="hero__trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Выездной сервис
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== УСЛУГИ — editorial список ===== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-label">01 / УСЛУГИ</div>
+            <h2 class="section-title">Направления работ</h2>
+            <p class="section-desc">Полный спектр ремонта и обслуживания спецтехники — от диагностики до капитального восстановления.</p>
+
+            <div class="services__list">
+                <a href="#" class="service-row">
+                    <span class="service-row__num">01</span>
+                    <div class="service-row__info">
+                        <span class="service-row__name">Ремонт экскаваторов</span>
+                        <span class="service-row__desc">Капитальный и текущий ремонт экскаваторов всех марок. Диагностика, замена узлов, регулировка.</span>
+                    </div>
+                    <span class="service-row__arrow">Подробнее →</span>
+                </a>
+                <a href="#" class="service-row">
+                    <span class="service-row__num">02</span>
+                    <div class="service-row__info">
+                        <span class="service-row__name">Ремонт погрузчиков</span>
+                        <span class="service-row__desc">Ремонт ходовой части, гидравлики, ДВС погрузчиков. Собственный парк инструментов.</span>
+                    </div>
+                    <span class="service-row__arrow">Подробнее →</span>
+                </a>
+                <a href="#" class="service-row">
+                    <span class="service-row__num">03</span>
+                    <div class="service-row__info">
+                        <span class="service-row__name">Гидравлические насосы</span>
+                        <span class="service-row__desc">Ремонт и обслуживание гидравлических насосов. Переборка, замена манжет, регулировка.</span>
+                    </div>
+                    <span class="service-row__arrow">Подробнее →</span>
+                </a>
+                <a href="#" class="service-row">
+                    <span class="service-row__num">04</span>
+                    <div class="service-row__info">
+                        <span class="service-row__name">Редукторы хода</span>
+                        <span class="service-row__desc">Ремонт редукторов хода экскаваторов и погрузчиков. Замена подшипников, шестерён.</span>
+                    </div>
+                    <span class="service-row__arrow">Подробнее →</span>
+                </a>
+                <a href="#" class="service-row">
+                    <span class="service-row__num">05</span>
+                    <div class="service-row__info">
+                        <span class="service-row__name">Распределители</span>
+                        <span class="service-row__desc">Ремонт гидрораспределителей. Промывка, замена золотников, восстановление герметичности.</span>
+                    </div>
+                    <span class="service-row__arrow">Подробнее →</span>
+                </a>
+                <a href="#" class="service-row">
+                    <span class="service-row__num">06</span>
+                    <div class="service-row__info">
+                        <span class="service-row__name">Ремонт ДВС</span>
+                        <span class="service-row__desc">Капитальный ремонт двигателей. Замена поршневой, вкладышей, регулировка ГРМ.</span>
+                    </div>
+                    <span class="service-row__arrow">Подробнее →</span>
+                </a>
+                <a href="#" class="service-row">
+                    <span class="service-row__num">07</span>
+                    <div class="service-row__info">
+                        <span class="service-row__name">Запчасти</span>
+                        <span class="service-row__desc">Оригинальные запчасти и аналоги для Hitachi, JCB, Volvo, Hyundai. В наличии и на заказ.</span>
+                    </div>
+                    <span class="service-row__arrow">Подробнее →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ПРЕИМУЩЕСТВА — сетка 3×2 ===== -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <div class="section-label">02 / ПРЕИМУЩЕСТВА</div>
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <p class="section-desc">Реальные факты, а не маркетинговые лозунги.</p>
+        </div>
+        <div class="container" style="padding-top:0;">
+            <div class="advantages__grid">
+                <div class="advantage">
+                    <div class="advantage__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="advantage__title">Опытные специалисты</h3>
+                    <p class="advantage__desc">Квалифицированные мастера с многолетним опытом ремонта спецтехники.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 11l3 3L22 4"/>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                    </div>
+                    <h3 class="advantage__title">Гарантия на работы</h3>
+                    <p class="advantage__desc">Предоставляем гарантию на выполненные работы и установленные запчасти.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="3" width="15" height="13"/>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="advantage__title">Выездной сервис</h3>
+                    <p class="advantage__desc">Выезжаем к клиенту для проведения ремонтных работ на объекте.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3 class="advantage__title">Своя ремонтная база</h3>
+                    <p class="advantage__desc">Собственное помещение для проведения ремонтных работ с необходимым оборудованием.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3 class="advantage__title">Приемлемые цены</h3>
+                    <p class="advantage__desc">Прозрачное ценообразование без скрытых доплат. Расчёт после диагностики.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="advantage__title">Быстрые сроки</h3>
+                    <p class="advantage__desc">Минимальные сроки ремонта. Понимаем, что простой техники — это потеря денег.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== МАРКИ — горизонтальная строка ===== -->
+    <section class="brands" id="brands">
+        <div class="container">
+            <div class="brands__header">
+                <div class="section-label">03 / МАРКИ</div>
+                <h2 class="section-title">Работаем с марками</h2>
+            </div>
+            <ul class="brands__list">
+                <li class="brand">
+                    <span class="brand__name">Hitachi</span>
+                    <span class="brand__type">Экскаваторы · Погрузчики</span>
+                </li>
+                <li class="brand">
+                    <span class="brand__name">JCB</span>
+                    <span class="brand__type">Экскаваторы-погрузчики</span>
+                </li>
+                <li class="brand">
+                    <span class="brand__name">Volvo</span>
+                    <span class="brand__type">Спецтехника · Запчасти</span>
+                </li>
+                <li class="brand">
+                    <span class="brand__name">Hyundai</span>
+                    <span class="brand__type">Экскаваторы · Погрузчики</span>
+                </li>
+            </ul>
+            <p class="brands__note">Запчасти и расходные материалы — уточняйте у менеджера</p>
+        </div>
+    </section>
+
+    <!-- ===== КОНТАКТЫ ===== -->
+    <section class="contacts" id="contact">
+        <div class="container">
+            <div class="section-label">04 / КОНТАКТЫ</div>
+            <h2 class="section-title">Как нас найти</h2>
+            <p class="section-desc">Мы находимся в Сыктывкаре, работаем по всей Республике Коми.</p>
+            <div class="contacts__layout">
+                <div class="contacts__info">
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Адрес</h4>
+                            <p>г. Сыктывкар, ул. Дырнос, д. 98</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>График</h4>
+                            <p>Пн–Пт: 09:00–18:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Телефон</h4>
+                            <a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a>
+                            <p style="font-size:12px;margin-top:4px">Заглушка — уточнить у клиента</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>email@example.com</p>
+                            <p style="font-size:12px;margin-top:4px">Заглушка — уточнить у клиента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=50.836629%2C61.668800&z=15&pt=50.836629,61.668800,pm2rdm" width="100%" height="100%" frameborder="0" allowfullscreen style="display:block"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ФОРМА ===== -->
+    <section class="form-section" id="form">
+        <div class="container">
+            <div class="form-layout">
+                <div class="form-info">
+                    <div class="section-label">05 / ЗАЯВКА</div>
+                    <h2 class="form-info__title">Оставить<br>заявку</h2>
+                    <p class="form-info__desc">Заполните форму — мы перезвоним в течение часа и уточним детали.</p>
+                    <div class="form-info__items">
+                        <div class="form-info__item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Бесплатная диагностика
+                        </div>
+                        <div class="form-info__item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Ответ в течение часа
+                        </div>
+                        <div class="form-info__item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Расчёт стоимости после осмотра
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-wrapper">
+                    <form class="form" id="repairForm" novalidate>
+                        <div class="form__row">
+                            <div class="form__field">
+                                <label for="name">Имя <span class="req">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Иван Иванов" required autocomplete="name">
+                                <span class="form__error" aria-live="polite"></span>
+                            </div>
+                            <div class="form__field">
+                                <label for="phone">Телефон <span class="req">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+                                <span class="form__error" aria-live="polite"></span>
+                            </div>
+                        </div>
+                        <div class="form__field">
+                            <label for="service">Тип техники</label>
+                            <select id="service" name="service">
+                                <option value="">Не выбрано</option>
+                                <option value="excavator">Экскаватор</option>
+                                <option value="loader">Погрузчик</option>
+                                <option value="hydraulics">Гидравлическая система</option>
+                                <option value="reducer">Редуктор хода</option>
+                                <option value="distributor">Распределитель</option>
+                                <option value="dvs">ДВС</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="form__field">
+                            <label for="message">Комментарий</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Опишите технику, марку и проблему..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--accent btn--full">Отправить заявку</button>
+                        <p class="form__note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <div class="form-success__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <h3>Заявка отправлена!</h3>
+                        <p>Мы свяжемся с вами в ближайшее время.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col footer__col-logo">
+                    <div class="footer__logo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                        ЭксТех<span mark>Сервис</span>
+                    </div>
+                    <p>Ремонт и обслуживание спецтехники в Сыктывкаре. Экскаваторы, погрузчики, гидравлика, редукторы, ДВС.</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Услуги</h4>
+                    <ul class="footer__list">
+                        <li><a href="#services">Ремонт экскаваторов</a></li>
+                        <li><a href="#services">Ремонт погрузчиков</a></li>
+                        <li><a href="#services">Гидравлические насосы</a></li>
+                        <li><a href="#services">Редукторы хода</a></li>
+                        <li><a href="#services">Запчасти</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>Компания</h4>
+                    <ul class="footer__list">
+                        <li><a href="#advantages">Преимущества</a></li>
+                        <li><a href="#brands">Марки техники</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>Контакты</h4>
+                    <ul class="footer__list">
+                        <li>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:middle;margin-right:6px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Сыктывкар, ул. Дырнос, 98
+                        </li>
+                        <li>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:middle;margin-right:6px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Пн–Пт: 09:00–18:00
+                        </li>
+                        <li><a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a></li>
+                        <li>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:middle;margin-right:6px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            email@example.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">© 2026 ЭксТехСервис. Ремонт спецтехники в Сыктывкаре.</p>
+                <p class="footer__dev">Лендинг разработан для тестового задания</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
